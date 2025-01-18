@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Calendar } from "lucide-react";
+import { Rocket, Star, Moon } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -34,22 +34,16 @@ export const Hero = () => {
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4">
-        {/* Floating Astronauts */}
-        <img 
-          src="/placeholder.svg" 
-          alt="Astronaut with rocket"
-          className="absolute left-1/4 top-1/4 w-32 h-32 floating" 
+        {/* Floating Icons */}
+        <Rocket 
+          className="absolute left-1/4 top-1/4 w-32 h-32 floating text-primary" 
         />
-        <img 
-          src="/placeholder.svg" 
-          alt="Astronaut with stars"
-          className="absolute right-1/4 top-1/3 w-24 h-24 floating" 
+        <Star 
+          className="absolute right-1/4 top-1/3 w-24 h-24 floating text-secondary" 
           style={{ animationDelay: "1s" }}
         />
-        <img 
-          src="/placeholder.svg" 
-          alt="Astronaut on skateboard"
-          className="absolute left-1/3 bottom-1/4 w-40 h-40 floating" 
+        <Moon 
+          className="absolute left-1/3 bottom-1/4 w-40 h-40 floating text-primary" 
           style={{ animationDelay: "2s" }}
         />
 
@@ -64,39 +58,12 @@ export const Hero = () => {
           If you're searching for a Website designer to transform your ideas into reality
         </p>
 
-        {/* CTA Buttons */}
-        <div className="flex gap-4 justify-center">
-          <Button 
-            size="lg"
-            className="gradient-bg border-none hover:opacity-90"
-          >
-            Let's Work Together!
-          </Button>
-          <Button 
-            size="lg"
-            variant="outline"
-            className="bg-black text-white border-none hover:bg-black/80"
-          >
-            <Calendar className="mr-2" />
-            Book a Call
-          </Button>
-        </div>
-      </div>
-
-      {/* Navigation */}
-      <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-8">
-        <Button variant="ghost" className="hover:text-primary transition-colors">
-          Recent Projects
-        </Button>
-        <Button variant="ghost" className="hover:text-primary transition-colors">
-          Services
-        </Button>
-        <Button variant="ghost" className="hover:text-primary transition-colors">
-          Contact
-        </Button>
-        <Button className="bg-black text-white hover:bg-black/80">
-          Book a Call
-          <Calendar className="ml-2" />
+        {/* CTA Button */}
+        <Button 
+          size="lg"
+          className="gradient-bg border-none hover:opacity-90"
+        >
+          Let's Work Together!
         </Button>
       </div>
     </div>
