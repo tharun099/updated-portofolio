@@ -1,16 +1,25 @@
-import { Home, Briefcase, Mail } from "lucide-react";
+import { Home, User, Briefcase, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 
 const navItems = [
   { name: 'Recent Projects', url: '#projects', icon: Home },
+  { name: 'About', url: '#about', icon: User },
   { name: 'Services', url: '#services', icon: Briefcase },
   { name: 'Contact', url: '#contact', icon: Mail }
 ];
 
 export const BottomNav = () => {
   const [activeTab, setActiveTab] = useState(navItems[0].name);
+
+  const handleClick = (name: string, url: string) => {
+    setActiveTab(name);
+    const element = document.querySelector(url);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <div className="fixed bottom-0 left-1/2 -translate-x-1/2 z-50 mb-6">
@@ -20,10 +29,9 @@ export const BottomNav = () => {
           const isActive = activeTab === item.name;
 
           return (
-            <a
+            <button
               key={item.name}
-              href={item.url}
-              onClick={() => setActiveTab(item.name)}
+              onClick={() => handleClick(item.name, item.url)}
               className={cn(
                 "relative cursor-pointer text-sm font-semibold px-6 py-2 rounded-full transition-colors",
                 "text-foreground/80 hover:text-primary",
@@ -52,7 +60,7 @@ export const BottomNav = () => {
                   </div>
                 </motion.div>
               )}
-            </a>
+            </button>
           );
         })}
       </div>

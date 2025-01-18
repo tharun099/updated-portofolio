@@ -8,7 +8,7 @@ export const Hero = () => {
       <div className="absolute top-8 w-full flex justify-between px-8 text-sm">
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-          <span>Available for Work</span>
+          <span className="bg-[#d1ffe0] px-2 py-1 rounded-full">Available for Work</span>
         </div>
         <div className="flex items-center gap-4">
           <a href="mailto:work@example.com" className="hover:text-primary transition-colors">
@@ -32,22 +32,23 @@ export const Hero = () => {
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4">
-        {/* Floating Icons */}
+      {/* Floating Icons (behind text) */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <Rocket 
-          className="absolute left-1/4 top-1/4 w-32 h-32 floating text-primary" 
+          className="absolute left-1/4 top-1/4 w-40 h-40 floating text-primary/20" 
         />
         <Star 
-          className="absolute right-1/4 top-1/3 w-24 h-24 floating text-secondary" 
+          className="absolute right-1/4 top-1/3 w-32 h-32 floating text-secondary/20" 
           style={{ animationDelay: "1s" }}
         />
         <Moon 
-          className="absolute left-1/3 bottom-1/4 w-40 h-40 floating text-primary" 
+          className="absolute left-1/3 bottom-1/4 w-48 h-48 floating text-primary/20" 
           style={{ animationDelay: "2s" }}
         />
+      </div>
 
-        {/* Text Content */}
+      {/* Main Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4">
         <h1 className="text-7xl font-bold mb-6">
           Hi, I'm <span className="italic">Yash!</span>
         </h1>
@@ -58,7 +59,6 @@ export const Hero = () => {
           If you're searching for a Website designer to transform your ideas into reality
         </p>
 
-        {/* CTA Button */}
         <Button 
           size="lg"
           className="gradient-bg border-none hover:opacity-90"
