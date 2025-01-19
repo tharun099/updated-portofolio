@@ -4,8 +4,8 @@ import { cn } from "@/lib/utils";
 import { useState, useEffect } from "react";
 
 const navItems = [
-  { name: 'Recent Projects', url: '#projects', icon: Home },
   { name: 'About', url: '#about', icon: User },
+  { name: 'Recent Projects', url: '#projects', icon: Home },
   { name: 'Services', url: '#services', icon: Briefcase },
   { name: 'Contact', url: '#contact', icon: Mail }
 ];
@@ -20,10 +20,19 @@ export const BottomNav = () => {
         element: document.querySelector(item.url)
       }));
 
-      const currentSection = sections.find(section => {
-        if (!section.element) return false;
-        const rect = section.element.getBoundingClientRect();
-        return rect.top <= 150 && rect.bottom >= 150;
+      let currentSection = null;
+      const scrollPosition = window.scrollY;
+
+      sections.forEach(section => {
+        if (!section.element) return;
+        const element = section.element;
+        const rect = element.getBoundingClientRect();
+        const offsetTop = rect.top + window.scrollY;
+        const offsetBottom = offsetTop + rect.height;
+
+        if (scrollPosition >= offsetTop - 200 && scrollPosition < offsetBottom - 200) {
+          currentSection = section;
+        }
       });
 
       if (currentSection) {
