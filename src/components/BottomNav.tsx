@@ -20,17 +20,24 @@ export const BottomNav = () => {
         element: document.querySelector(item.url)
       }));
 
-      let currentSection = null;
+      const viewportHeight = window.innerHeight;
       const scrollPosition = window.scrollY;
+      let currentSection = sections[0]; // Default to first section
 
       sections.forEach(section => {
         if (!section.element) return;
-        const element = section.element;
-        const rect = element.getBoundingClientRect();
-        const offsetTop = rect.top + window.scrollY;
-        const offsetBottom = offsetTop + rect.height;
+        const rect = section.element.getBoundingClientRect();
+        const elementTop = rect.top + window.scrollY;
+        const elementCenter = elementTop + (rect.height / 2);
 
-        if (scrollPosition >= offsetTop - 200 && scrollPosition < offsetBottom - 200) {
+        // Check if the section's center is within the viewport
+        if (Math.abs(scrollPosition - elementCenter) < viewportHeight / 2) {
+          currentSection = section;
+        }
+
+        // Special handling for last section (Contact)
+        if (section.name === 'Contact' && 
+            window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100) {
           currentSection = section;
         }
       });
