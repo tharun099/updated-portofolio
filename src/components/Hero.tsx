@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Rocket, Star, Moon } from "lucide-react";
+import { Rocket, Star, Moon, Mail } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -7,12 +7,18 @@ export const Hero = () => {
       {/* Status and Social Links */}
       <div className="absolute top-8 w-full flex justify-between px-8 text-sm">
         <div className="flex items-center gap-2">
-          <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-          <span className="bg-[#d1ffe0] px-2 py-1 rounded-full">Available for Work</span>
+          <div className="flex items-center gap-2 bg-[#d1ffe0] px-3 py-1.5 rounded-full">
+            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+            <span className="text-green-800">Available for Work</span>
+          </div>
         </div>
         <div className="flex items-center gap-4">
-          <a href="mailto:work@example.com" className="hover:text-primary transition-colors">
-            work@example.com
+          <a 
+            href="mailto:work@yash.design" 
+            className="flex items-center gap-2 bg-[#f5f5f4] hover:bg-[#e7e5e4] transition-colors px-3 py-1.5 rounded-full text-[#1c1917]"
+          >
+            <Mail className="w-4 h-4" />
+            work@yash.design
           </a>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
             <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
@@ -35,14 +41,14 @@ export const Hero = () => {
       {/* Floating Icons (behind text) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <Rocket 
-          className="absolute left-1/4 top-1/4 w-40 h-40 floating text-primary/20" 
+          className="absolute left-1/4 top-1/4 w-48 h-48 floating text-primary/10" 
         />
         <Star 
-          className="absolute right-1/4 top-1/3 w-32 h-32 floating text-secondary/20" 
+          className="absolute right-1/4 top-1/3 w-40 h-40 floating text-secondary/10" 
           style={{ animationDelay: "1s" }}
         />
         <Moon 
-          className="absolute left-1/3 bottom-1/4 w-48 h-48 floating text-primary/20" 
+          className="absolute left-1/3 bottom-1/4 w-56 h-56 floating text-primary/10" 
           style={{ animationDelay: "2s" }}
         />
       </div>
