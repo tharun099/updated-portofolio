@@ -1,7 +1,7 @@
 import { Home, User, Briefcase, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const navItems = [
   { name: 'Recent Projects', url: '#projects', icon: Home },
@@ -12,6 +12,30 @@ const navItems = [
 
 export const BottomNav = () => {
   const [activeTab, setActiveTab] = useState(navItems[0].name);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = navItems.map(item => ({
+        name: item.name,
+        element: document.querySelector(item.url)
+      }));
+
+      const currentSection = sections.find(section => {
+        if (!section.element) return false;
+        const rect = section.element.getBoundingClientRect();
+        return rect.top <= 150 && rect.bottom >= 150;
+      });
+
+      if (currentSection) {
+        setActiveTab(currentSection.name);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleClick = (name: string, url: string) => {
     setActiveTab(name);
