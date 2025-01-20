@@ -70,17 +70,17 @@ function Case() {
       return;
     }
 
-    const timer = setTimeout(() => {
-      if (api.selectedScrollSnap() + 1 === api.scrollSnapList().length) {
+    const timer = setInterval(() => {
+      if (api.selectedScrollSnap() === api.scrollSnapList().length - 1) {
+        api.scrollTo(0, true); // true enables smooth scrolling
         setCurrent(0);
-        api.scrollTo(0);
       } else {
         api.scrollNext();
-        setCurrent(current + 1);
+        setCurrent(prev => prev + 1);
       }
     }, 3000);
 
-    return () => clearTimeout(timer);
+    return () => clearInterval(timer);
   }, [api, current]);
 
   return (
@@ -90,7 +90,16 @@ function Case() {
           <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-center mb-12">
             Work Gallery
           </h2>
-          <Carousel setApi={setApi} className="w-full">
+          <Carousel 
+            setApi={setApi} 
+            className="w-full"
+            opts={{
+              align: "start",
+              loop: true,
+              skipSnaps: false,
+              duration: 20,
+            }}
+          >
             <CarouselContent>
               {projects.map((project, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
