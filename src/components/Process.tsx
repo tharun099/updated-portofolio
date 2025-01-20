@@ -15,11 +15,11 @@ export const Process = () => {
           icon={<Eye className="w-8 h-8 text-secondary" />}
           className="md:col-span-2"
           header={
-            <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden">
+            <div className="relative w-full h-60 mb-4 rounded-lg overflow-hidden">
               <img
-                src="/placeholder.svg"
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
                 alt="Discovery Phase"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
           }
@@ -29,11 +29,11 @@ export const Process = () => {
           description="Turning ideas into reality with modern design principles"
           icon={<Rocket className="w-8 h-8 text-secondary" />}
           header={
-            <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden">
+            <div className="relative w-full h-60 mb-4 rounded-lg overflow-hidden">
               <img
-                src="/placeholder.svg"
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
                 alt="Implementation"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
           }
@@ -43,11 +43,11 @@ export const Process = () => {
           description="Building with cutting-edge technologies for optimal performance"
           icon={<Palette className="w-8 h-8 text-secondary" />}
           header={
-            <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden">
+            <div className="relative w-full h-60 mb-4 rounded-lg overflow-hidden">
               <img
-                src="/placeholder.svg"
+                src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b"
                 alt="Development"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
           }
@@ -58,11 +58,11 @@ export const Process = () => {
           icon={<Globe className="w-8 h-8 text-secondary" />}
           className="md:col-span-2"
           header={
-            <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden">
+            <div className="relative w-full h-60 mb-4 rounded-lg overflow-hidden">
               <img
-                src="/placeholder.svg"
+                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
                 alt="Delivery"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
           }
