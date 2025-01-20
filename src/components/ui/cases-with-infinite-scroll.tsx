@@ -14,19 +14,54 @@ function Case() {
 
   const projects = [
     {
-      title: "DZJNR Community",
-      image: "/lovable-uploads/c9ec160e-0f17-4447-9bbf-7e18a95a64b8.png",
-      description: "Join the community with our first-ever tee"
+      title: "Project One",
+      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
+      description: "Web Development"
     },
     {
-      title: "Agency Results",
-      image: "/lovable-uploads/c9ec160e-0f17-4447-9bbf-7e18a95a64b8.png",
-      description: "No Agency Fluff, Only Genuine Results"
+      title: "Project Two",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      description: "UI/UX Design"
     },
     {
-      title: "Speaking Course",
-      image: "/lovable-uploads/c9ec160e-0f17-4447-9bbf-7e18a95a64b8.png",
-      description: "Speak with Confidence & Clarity in 6 Weeks"
+      title: "Project Three",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+      description: "Mobile App Development"
+    },
+    {
+      title: "Project Four",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+      description: "E-commerce Solution"
+    },
+    {
+      title: "Project Five",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+      description: "Digital Marketing"
+    },
+    {
+      title: "Project Six",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      description: "Brand Identity"
+    },
+    {
+      title: "Project Seven",
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+      description: "Social Media Management"
+    },
+    {
+      title: "Project Eight",
+      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
+      description: "Content Strategy"
+    },
+    {
+      title: "Project Nine",
+      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
+      description: "SEO Optimization"
+    },
+    {
+      title: "Project Ten",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      description: "Web Analytics"
     }
   ];
 
