@@ -24,6 +24,13 @@ const projects = [
   }
 ];
 
+const processSteps = [
+  { number: "1", title: "Spy", description: "Research and analyze the project requirements and objectives." },
+  { number: "2", title: "Dream", description: "Plan and ideate different directions." },
+  { number: "3", title: "Craft", description: "Crafting, Refining & doing some sort of magic." },
+  { number: "4", title: "Testify", description: "Test and iterate." },
+];
+
 export const Services = () => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
@@ -68,6 +75,28 @@ export const Services = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="max-w-6xl mx-auto mt-20">
+        <h3 className="text-3xl font-bold text-center mb-16">
+          The Process - <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Behind The Scenes</span>
+        </h3>
+        <div className="flex flex-col md:flex-row justify-between items-start gap-8 px-8">
+          {processSteps.map((step, index) => (
+            <div key={step.number} className="flex-1 relative">
+              <div className="flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold text-xl">
+                  {step.number}
+                </div>
+                {index < processSteps.length - 1 && (
+                  <div className="hidden md:block absolute top-6 left-[calc(50%+2rem)] w-[calc(100%-4rem)] border-t-2 border-dashed border-gray-300" />
+                )}
+              </div>
+              <h4 className="text-xl font-bold text-center mb-2">{step.title}</h4>
+              <p className="text-gray-600 text-center text-sm">{step.description}</p>
             </div>
           ))}
         </div>
