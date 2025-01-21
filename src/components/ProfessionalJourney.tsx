@@ -1,7 +1,6 @@
-import React from "react";
 import { FeatureSteps } from "@/components/blocks/feature-section";
 
-export const About = () => {
+export const ProfessionalJourney = () => {
   const features = [
     {
       step: '2024',
@@ -26,7 +25,7 @@ export const About = () => {
   return (
     <section id="about" className="py-20">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold mb-12 text-center">About Me</h2>
+        <h2 className="text-4xl font-bold mb-12 text-center">Professional Journey</h2>
         <FeatureSteps 
           features={features}
           title="Professional Journey"
