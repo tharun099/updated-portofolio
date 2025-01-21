@@ -3,6 +3,7 @@ import { ProfessionalJourney } from "@/components/ProfessionalJourney";
 import { Services } from "@/components/Services";
 import { WorkGallery } from "@/components/WorkGallery";
 import { Contact } from "@/components/Contact";
+import { Testimonials } from "@/components/Testimonials";
 import { BottomNav } from "@/components/BottomNav";
 
 const Index = () => {
@@ -18,6 +19,7 @@ const Index = () => {
       <div id="services">
         <Services />
       </div>
+      <Testimonials />
       <div id="contact">
         <Contact />
       </div>
