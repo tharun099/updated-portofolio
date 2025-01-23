@@ -58,28 +58,16 @@ export const Hero = () => {
         <h1 className="text-7xl font-bold mb-6">
           Hi, I'm <span className="italic">Yash!</span>
         </h1>
-        <p className="text-xl mb-8">
-          I design websites and enjoy traveling to new places
+        <p className="text-xl mb-8 max-w-2xl">
+          Web designer, avid reader, pet lover, and adventure seeker – that's me!
         </p>
-
-        {/* Circular Image */}
-        <div className="relative w-[320px] h-[320px] mb-12">
-          <div className="absolute inset-0 rounded-full overflow-hidden border-4 border-white shadow-xl">
-            <img 
-              src="/lovable-uploads/bf363c0a-95ea-4adf-880c-1d12894f8258.png"
-              alt="Yash's profile"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
-
         <p className="text-lg mb-12 max-w-2xl text-gray-600">
           If you're searching for a Website designer to transform your ideas into reality
         </p>
 
         <Button 
           size="lg"
-          className="gradient-bg border-none hover:opacity-90 text-lg px-8 py-6"
+          className="gradient-bg border-none hover:opacity-90"
         >
           Let's Work Together!
         </Button>
