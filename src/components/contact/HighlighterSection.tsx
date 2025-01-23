@@ -64,9 +64,12 @@ export const HighlighterSection = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-col items-center justify-center space-y-4">
-               <h3 className="text-2xl font-bold">Any questions about Design?</h3> 
-                  <div className="flex gap-1">
+                <div className="flex flex-col items-center justify-center space-y-6">
+                  <div className="text-center">
+                    <h3 className="text-2xl font-bold md:text-4xl">Any questions about Design?</h3>
+                    <p className="mt-2 text-gray-600">Feel free to reach out!</p>
+                  </div>
+                  <div className="flex items-center gap-2">
                     <Button>
                       Book a call
                     </Button>
