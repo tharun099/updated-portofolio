@@ -61,8 +61,8 @@ export const MovingLine = () => {
             y2="1566.02"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#3879E7" stopOpacity="0" />
-            <stop offset="1" stopColor="#3879E7" />
+            <stop stopColor="#8B5CF6" stopOpacity="0" />
+            <stop offset="1" stopColor="#8B5CF6" />
           </linearGradient>
         </defs>
         <motion.path
@@ -74,10 +74,10 @@ export const MovingLine = () => {
           }}
           transition={transition}
           d={PATH}
-          stroke="var(--blue-500)"
+          stroke="#8B5CF6"
           strokeOpacity="1"
           strokeLinecap="round"
-          strokeWidth="3"
+          strokeWidth="4"
         />
       </svg>
       <div className="flex flex-col w-full">
