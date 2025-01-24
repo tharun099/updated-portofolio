@@ -37,11 +37,8 @@ export function TestimonialsSection({
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
           <div className="flex overflow-hidden p-2 [--gap:1rem] [gap:var(--gap)]">
             <div 
-              className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row"
+              className="animate-[marquee_30s_linear_infinite] flex shrink-0 justify-around [gap:var(--gap)]"
               style={{
-                animationDuration: '30s',
-                animationTimingFunction: 'linear',
-                animationIterationCount: 'infinite',
                 willChange: 'transform'
               }}
             >
@@ -55,11 +52,8 @@ export function TestimonialsSection({
               ))}
             </div>
             <div 
-              className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row"
+              className="animate-[marquee_30s_linear_infinite] flex shrink-0 justify-around [gap:var(--gap)]"
               style={{
-                animationDuration: '30s',
-                animationTimingFunction: 'linear',
-                animationIterationCount: 'infinite',
                 willChange: 'transform'
               }}
             >
