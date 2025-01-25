@@ -2,8 +2,27 @@ import { ContactInfo } from "./contact/ContactInfo";
 import { HighlighterSection } from "./contact/HighlighterSection";
 import { Gravity, MatterBody } from "@/components/ui/gravity";
 import { Checkbox } from "@/components/ui/checkbox";
+import { SocialLinks } from "@/components/ui/social-links";
 
 export const Contact = () => {
+  const socials = [
+    {
+      name: "Twitter",
+      image: "https://link-hover-lndev.vercel.app/twitter.png",
+      url: "https://twitter.com/amitdas"
+    },
+    {
+      name: "Instagram",
+      image: "https://link-hover-lndev.vercel.app/instagram.png",
+      url: "https://instagram.com/yashjain.design"
+    },
+    {
+      name: "LinkedIn",
+      image: "https://link-hover-lndev.vercel.app/linkedin.png",
+      url: "https://linkedin.com/in/yashjain"
+    }
+  ];
+
   return (
     <section className="py-20 px-4">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 mt-20">
@@ -17,14 +36,14 @@ export const Contact = () => {
         </h1>
       </div>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 mt-20">
-        <div className="max-w-3xl mx-auto bg-[#E5DEFF] rounded-3xl p-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mt-20">
+        <div className="md:col-span-2 bg-[#E5DEFF] rounded-3xl p-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold mb-2">Bucket List <span className="text-blue-500">✈</span></h2>
             <p className="text-gray-600">Tip: Drag & play around</p>
           </div>
 
-          <div className="w-full h-[400px] relative">
+          <div className="w-full h-[500px] relative">
             <Gravity gravity={{ x: 0, y: 1 }} className="w-full h-full">
             <MatterBody
               matterBodyOptions={{ friction: 0.5, restitution: 0.2 }}
@@ -102,7 +121,7 @@ export const Contact = () => {
           </div>
         </div>
 
-        <div className="max-w-3xl mx-auto bg-white rounded-3xl p-8 border border-gray-200">
+        <div className="bg-white rounded-3xl p-8 border border-gray-200">
           <div className="text-center mb-8">
             <h2 className="text-4xl font-bold italic mb-4">People I'd like to meet</h2>
             <p className="text-gray-600 mb-8">
@@ -112,28 +131,33 @@ export const Contact = () => {
           </div>
 
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
+            <a href="https://twitter.com/amitdas" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:bg-gray-50 p-2 rounded-lg transition-colors">
               <Checkbox id="amit" />
-              <label htmlFor="amit" className="text-lg">Amit Das</label>
-            </div>
-            <div className="flex items-center space-x-2">
+              <label htmlFor="amit" className="text-lg cursor-pointer">Amit Das</label>
+            </a>
+            <a href="https://twitter.com/dannpetty" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:bg-gray-50 p-2 rounded-lg transition-colors">
               <Checkbox id="dann" />
-              <label htmlFor="dann" className="text-lg">Dann Petty</label>
-            </div>
-            <div className="flex items-center space-x-2">
+              <label htmlFor="dann" className="text-lg cursor-pointer">Dann Petty</label>
+            </a>
+            <a href="https://twitter.com/theChrisDo" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:bg-gray-50 p-2 rounded-lg transition-colors">
               <Checkbox id="chris" />
-              <label htmlFor="chris" className="text-lg">Chris Do</label>
-            </div>
-            <div className="flex items-center space-x-2">
+              <label htmlFor="chris" className="text-lg cursor-pointer">Chris Do</label>
+            </a>
+            <a href="https://twitter.com/abnux" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:bg-gray-50 p-2 rounded-lg transition-colors">
               <Checkbox id="abhinav" />
-              <label htmlFor="abhinav" className="text-lg">Abhinav Chikara</label>
-            </div>
-            <div className="flex items-center space-x-2">
+              <label htmlFor="abhinav" className="text-lg cursor-pointer">Abhinav Chikara</label>
+            </a>
+            <a href="https://twitter.com/Casey" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:bg-gray-50 p-2 rounded-lg transition-colors">
               <Checkbox id="casey" />
-              <label htmlFor="casey" className="text-lg">Casey Neistat</label>
-            </div>
+              <label htmlFor="casey" className="text-lg cursor-pointer">Casey Neistat</label>
+            </a>
           </div>
         </div>
+      </div>
+
+      <div className="max-w-3xl mx-auto text-center mt-32 mb-20">
+        <h3 className="text-2xl font-medium mb-8">Say Hi! or internet stalk me more or let's go somewhere together 👀</h3>
+        <SocialLinks socials={socials} className="justify-center" />
       </div>
     </section>
   );
