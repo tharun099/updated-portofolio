@@ -4,7 +4,7 @@ import Matter, { Bodies, Common, Engine, Events, Mouse, MouseConstraint, Query, 
 import decomp from "poly-decomp"
 import { cn } from "@/lib/utils"
 import { GravityContext } from "./GravityContext"
-import { GravityProps, GravityRef, PhysicsBody } from "./types"
+import { GravityProps, GravityRef, PhysicsBody, MatterBodyProps } from "./types"
 import { calculatePosition, parsePathToVertices } from "./utils"
 
 export const Gravity = forwardRef<GravityRef, GravityProps>(
