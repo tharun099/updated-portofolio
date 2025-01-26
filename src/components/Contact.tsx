@@ -155,9 +155,14 @@ export const Contact = () => {
         </div>
       </div>
 
-      <div className="max-w-3xl mx-auto text-center mt-32 mb-20">
+      <div className="max-w-3xl mx-auto text-center mt-32">
         <h3 className="text-2xl font-medium mb-8">Say Hi! or internet stalk me more or let's go somewhere together 👀</h3>
         <SocialLinks socials={socials} className="justify-center" />
+        
+        <div className="mt-20 mb-8 text-gray-600">
+          <p>crafted with ❤️ by tharun-gadupudi</p>
+          <p className="mt-2">© 2024 All rights reserved.</p>
+        </div>
       </div>
     </section>
   );
