@@ -8,7 +8,7 @@ export const Contact = () => {
   const socials = [
     {
       name: "Twitter",
-      image: "https://link-hover-lndev.vercel.app/twitter.png",
+      image: "https://w7.pngwing.com/pngs/515/1/png-transparent-twitter-logo-computer-icons-logo-twitter-icon-computer-wallpaper-monochrome-bird-thumbnail.png",
       url: "https://twitter.com/amitdas"
     },
     {
