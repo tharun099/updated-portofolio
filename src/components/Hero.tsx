@@ -63,16 +63,12 @@ export const Hero = () => {
         </p>
 
         {/* Profile Image */}
-        <div className="w-72 h-96 relative mb-12 transform hover:scale-105 transition-transform duration-300">
-          <div className="absolute inset-0 bg-primary/20 rounded-[60%_40%_40%_60%/70%_50%_50%_60%] animate-pulse"></div>
-          <div className="absolute inset-0 bg-secondary/10 rounded-[60%_40%_40%_60%/70%_50%_50%_60%] animate-pulse [animation-delay:200ms]"></div>
-          <div className="relative w-full h-full rounded-[60%_40%_40%_60%/70%_50%_50%_60%] overflow-hidden border-4 border-primary/20 shadow-xl animate-floating">
-            <img
-              src="/lovable-uploads/34bac71f-2afd-4801-b831-025e38948551.png"
-              alt="Yash's profile"
-              className="w-full h-full object-cover"
-            />
-          </div>
+        <div className="w-48 h-48 rounded-full overflow-hidden mb-8 border-4 border-primary/20">
+          <img
+            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+            alt="Yash's profile"
+            className="w-full h-full object-cover"
+          />
         </div>
 
         <p className="text-lg mb-12 max-w-2xl text-gray-600">
