@@ -9,17 +9,17 @@ export const Contact = () => {
     {
       name: "Twitter",
       image: "https://w7.pngwing.com/pngs/515/1/png-transparent-twitter-logo-computer-icons-logo-twitter-icon-computer-wallpaper-monochrome-bird-thumbnail.png",
-      url: "https://twitter.com/amitdas"
+      url: "#"
     },
     {
       name: "Instagram",
       image: "https://link-hover-lndev.vercel.app/instagram.png",
-      url: "https://instagram.com/yashjain.design"
+      url: "#"
     },
     {
       name: "LinkedIn",
       image: "https://link-hover-lndev.vercel.app/linkedin.png",
-      url: "https://linkedin.com/in/yashjain"
+      url: "#"
     }
   ];
 
@@ -125,7 +125,6 @@ export const Contact = () => {
           <div className="text-center mb-8">
             <h2 className="text-4xl font-bold italic mb-4">People I'd like to meet</h2>
             <p className="text-gray-600 mb-8">
-              I've been fortunate enough to meet some of my heroes, but I still have a bucket list.
               This is a list of some of the people I'd like to high five IRL.
             </p>
           </div>
@@ -133,23 +132,23 @@ export const Contact = () => {
           <div className="space-y-4">
             <a href="https://twitter.com/amitdas" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:bg-gray-50 p-2 rounded-lg transition-colors">
               <Checkbox id="amit" />
-              <label htmlFor="amit" className="text-lg cursor-pointer">Amit Das</label>
+              <label htmlFor="amit" className="text-lg cursor-pointer">Nithin Kamanth</label>
             </a>
             <a href="https://twitter.com/dannpetty" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:bg-gray-50 p-2 rounded-lg transition-colors">
               <Checkbox id="dann" />
-              <label htmlFor="dann" className="text-lg cursor-pointer">Dann Petty</label>
+              <label htmlFor="dann" className="text-lg cursor-pointer">Ishan Sharma</label>
             </a>
             <a href="https://twitter.com/theChrisDo" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:bg-gray-50 p-2 rounded-lg transition-colors">
               <Checkbox id="chris" />
-              <label htmlFor="chris" className="text-lg cursor-pointer">Chris Do</label>
+              <label htmlFor="chris" className="text-lg cursor-pointer">Vamsi Kurapati</label>
             </a>
             <a href="https://twitter.com/abnux" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:bg-gray-50 p-2 rounded-lg transition-colors">
               <Checkbox id="abhinav" />
-              <label htmlFor="abhinav" className="text-lg cursor-pointer">Abhinav Chikara</label>
+              <label htmlFor="abhinav" className="text-lg cursor-pointer">Sriman Kotaru</label>
             </a>
             <a href="https://twitter.com/Casey" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:bg-gray-50 p-2 rounded-lg transition-colors">
               <Checkbox id="casey" />
-              <label htmlFor="casey" className="text-lg cursor-pointer">Casey Neistat</label>
+              <label htmlFor="casey" className="text-lg cursor-pointer">Charan (I_guru_crazy)</label>
             </a>
           </div>
         </div>
